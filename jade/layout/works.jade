@@ -1,0 +1,23 @@
+section#works
+  - each work in works
+  
+    article.work
+      .container
+        .center-y
+        
+
+          
+          .col-md-1.num
+            p
+              span No. 
+              | #{work.num}
+          .col-md-6.work-infos
+            h1.title #{work.name}
+            span.type / #{work.type}
+            span.subtitle infos
+            p #{work.description}  
+            .buttons
+              a(href="about.html").btn.animsition-link Voir l'étude de cas
+              a(href="#{work.url}").btn
+                svg(version='1.1' x='0px', y='0px', width='512px', height='512px', viewbox='0 0 512 512', style='enable-background:new 0 0 512 512;', xml:space='preserve')
+                  polygon(points='352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 ')

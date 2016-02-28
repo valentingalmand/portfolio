@@ -1,0 +1,10 @@
+nav#nav
+  .container
+    .col-md-12.col-xs-12
+      ul
+        li: a(href="index.html").logo 
+          h1 Valentin Galmand
+        ul.menu
+          li: a(href="index.html" class=(title === 'Home')? "active" : "") Travaux
+          li: a(href="about.html" class=(title === 'About')? "active" : "") Bio
+          li: a(href="#") Envoyez-moi un mail

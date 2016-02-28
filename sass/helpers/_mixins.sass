@@ -1,0 +1,22 @@
+=transition($prop)
+	transition: $prop 250ms ease-in-out
+=size($size)
+	height: $size
+	width: $size
+=center
+	position: absolute
+	transform: translateX(-50%) translateY(-50%)
+	left: 50%
+	top: 50%
+
+//- Responsive
+=sm
+	@media (min-width: 768px)
+		@content
+
+=md
+	@media (min-width: 1025px)
+		@content
+
+=ls($val, $font-size)
+	letter-spacing: $val * $font-size / 1000 * 1px

@@ -1,0 +1,74 @@
+#works
+  padding: 0
+  .work
+    position: relative
+    max-width: 2000px
+    margin: 1px auto
+    height: 600px
+    color: rgba(#fff, 0.8)
+    @each $num, $url in (1, 'https://source.unsplash.com/user/erondu/2000x1000'), (2, 'https://source.unsplash.com/user/williamtm/2000x1000'), (3, 'https://source.unsplash.com/user/jogi/2000x1000')
+      &:nth-of-type(#{$num})
+        background-image: url('#{$url}')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(10deg, rgba($gray, 0.6) 40% , rgba($gray, 0))
+
+    .center-y
+      position: absolute
+      z-index: 2
+      top: 50%
+      transform: translateY(-50%)
+    .num
+      font-size: 34px
+      text-align: center
+      font-style: italic
+      margin-top: -7px
+      span
+        font-size: 20px
+        font-family: $roboto
+        margin-bottom: 4px
+        display: block
+        font-style: normal
+        font-weight: lighter
+    &-infos
+      .title
+        color: #fff
+        position: relative
+        display: inline
+        &::after
+          background: rgba(#fff, 0.2)
+
+      .type
+        font-family: $roboto
+        letter-spacing: 0.6px
+        text-transform: uppercase
+        font-size: 15px
+        margin-top: 0
+        color: #efefef
+        display: block
+      p
+        font-style: italic
+      .buttons
+        margin-top: 20px
+        display: flex
+        justify-content: flex-start
+      .btn
+        margin: 0
+        color: $color
+        display: inline-block
+
+        &:last-child
+          margin-left: -1px
+        svg
+          height: 20px
+          width: 20px
+          transform: rotate(180deg)
+          fill: $color

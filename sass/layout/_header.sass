@@ -1,0 +1,28 @@
+#header
+  position: relative
+  max-width: 2000px
+  margin: 0 auto
+  background: url($gt_img + 'header-bg-2.png') no-repeat center center
+  background-size: cover
+  background-color: #fff
+  color: $gray
+  padding: 200px 0
+  a
+    position: relative
+    font-family: $noto
+    color: #000
+    text-decoration: underline
+    &::after
+      content: ''
+      position: absolute
+      width: 0
+      height: 1px
+      background: $color
+      bottom: -1px
+      left: 0
+      +transition(width)
+    &:hover
+      &::after
+        width: 100%
+  p
+    font-style: italic
