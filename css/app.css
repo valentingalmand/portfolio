@@ -2353,12 +2353,12 @@ h3 {
     height: 600px;
     color: rgba(255, 255, 255, 0.8); }
     #works .work:nth-of-type(1) {
-      background-image: url("https://source.unsplash.com/user/erondu/2000x1000");
+      background-image: url("../assets/img/rise.jpeg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover; }
     #works .work:nth-of-type(2) {
-      background-image: url("https://source.unsplash.com/user/williamtm/2000x1000");
+      background-image: url("../assets/img/meije.jpeg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover; }

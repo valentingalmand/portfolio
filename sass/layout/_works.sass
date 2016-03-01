@@ -6,7 +6,7 @@
     margin: 1px auto
     height: 600px
     color: rgba(#fff, 0.8)
-    @each $num, $url in (1, 'https://source.unsplash.com/user/erondu/2000x1000'), (2, 'https://source.unsplash.com/user/williamtm/2000x1000'), (3, 'https://source.unsplash.com/user/jogi/2000x1000')
+    @each $num, $url in (1, '../assets/img/rise.jpeg'), (2, '../assets/img/meije.jpeg'), (3, 'https://source.unsplash.com/user/jogi/2000x1000')
       &:nth-of-type(#{$num})
         background-image: url('#{$url}')
         background-repeat: no-repeat
