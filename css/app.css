@@ -780,13 +780,19 @@ p {
   font-style: italic; }
 
 .title {
-  font-size: 34px;
+  line-height: 31px;
+  font-size: 26px;
   margin-bottom: 15px;
-  margin-top: 8px;
+  margin-top: 48px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2.2px;
   position: relative; }
+  @media (min-width: 768px) {
+    .title {
+      line-height: 41px;
+      font-size: 34px;
+      margin-top: 8px; } }
   .title::after {
     content: "";
     position: absolute;
@@ -2170,17 +2176,50 @@ h3 {
 .btn {
   border: 1px solid;
   display: inline-block;
-  padding: 15px 3em;
+  padding: 15px 18px;
   box-shadow: 0 0 0 0 #39FFBF;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   margin: 20px auto 0 auto; }
+  @media (min-width: 768px) {
+    .btn {
+      padding: 15px 3em; } }
   .btn:hover {
     border-color: #39FFBF;
     color: #39FFBF !important;
     box-shadow: 3px 3px 0 0 #39FFBF; }
+
+.btn.disable {
+  font-family: "Roboto", sans-serif;
+  font-style: normal !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out; }
+  .btn.disable:hover, .btn.disable:focus, .btn.disable:active {
+    color: rgba(255, 255, 255, 0) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none; }
+    .btn.disable:hover::before, .btn.disable:focus::before, .btn.disable:active::before {
+      opacity: 1; }
+  .btn.disable::before {
+    opacity: 0;
+    content: attr(data-text);
+    color: #DEEFF5;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out; }
 
 #nav {
   width: 100%;
@@ -2233,11 +2272,16 @@ h3 {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
       padding: 0;
-      margin-top: 30px; }
+      margin-top: 30px;
+      line-height: 47px; }
       @media (min-width: 768px) {
         #nav ul.menu {
-          margin-top: 0; } }
+          margin-top: 0;
+          line-height: inherit; } }
       #nav ul.menu li {
         margin-right: -1px; }
         #nav ul.menu li a {
@@ -2255,14 +2299,19 @@ h3 {
           margin-right: 0; }
       #nav ul.menu .active {
         color: #2c2b2e;
-        border-color: #2c2b2e #39FFBF #2c2b2e #2c2b2e;
+        border-color: #2c2b2e;
         background: #39FFBF; }
+        @media (min-width: 768px) {
+          #nav ul.menu .active {
+            border-color: #2c2b2e #39FFBF #2c2b2e #2c2b2e; } }
         #nav ul.menu .active:hover {
           color: #2c2b2e; }
         #nav ul.menu .active .active {
           color: #2c2b2e;
-          border-color: #2c2b2e #39FFBF #2c2b2e #2c2b2e;
           background: #39FFBF; }
+          @media (min-width: 768px) {
+            #nav ul.menu .active .active {
+              border-color: #2c2b2e #39FFBF #2c2b2e #2c2b2e; } }
           #nav ul.menu .active .active:hover {
             color: #2c2b2e; }
 
@@ -2335,10 +2384,15 @@ h3 {
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
     #works .work .num {
-      font-size: 34px;
-      text-align: center;
+      font-size: 26px;
       font-style: italic;
-      margin-top: -7px; }
+      margin-bottom: 20px; }
+      @media (min-width: 768px) {
+        #works .work .num {
+          font-size: 34px;
+          margin-bottom: 0;
+          margin-top: -7px;
+          text-align: center; } }
       #works .work .num span {
         font-size: 20px;
         font-family: "Roboto", sans-serif;

@@ -28,10 +28,13 @@
     &.menu
       flex-direction: row
       justify-content: center
+      flex-wrap: wrap
       padding: 0
       margin-top: 30px
+      line-height: 47px
       +sm
         margin-top: 0
+        line-height: inherit
       li
         margin-right: -1px
 
@@ -52,13 +55,16 @@
 
       .active
         color: $gray
-        border-color: $gray $color $gray $gray
+        +sm
+          border-color: $gray $color $gray $gray
+        border-color: $gray
         background: $color
         &:hover
           color: $gray
         .active
           color: $gray
-          border-color: $gray $color $gray $gray
+          +sm
+            border-color: $gray $color $gray $gray
           background: $color
           &:hover
             color: $gray
