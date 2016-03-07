@@ -16,3 +16,7 @@ $(document).ready(function() {
                             ]
   });
 });
+
+$('.menu_mobile-icon').click(function() {
+  $('.menu_mobile').toggleClass('is-active');
+});
